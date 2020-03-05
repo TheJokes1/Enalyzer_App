@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             
+             x:Class="Enalyzer_App.MainPage">
+
+    <StackLayout Padding="10" Spacing="0"
+        Style="{x:DynamicResource ThemeColor}">
+        <Label TextColor="{x:DynamicResource LabelColor}" HorizontalOptions="Center" VerticalOptions="Center" Text="Saleh Qadeer"></Label>
+
+        <!-- Place new controls here -->
+        <!--<Label Text="Naam Databank" />
+        <Entry Text="{Binding NameDatabase}" Placeholder="Enprove" Margin="0,0,0,20"/>-->
+
+        <Label Text="Naam Meetpunt" HorizontalOptions="Start" HeightRequest="-1"/>
+        <Entry Text= "{Binding Tag}" Placeholder= "tbuiten_topic_id1" Margin="0,0,0,25"/>
+
+        <Label Text="Van:"/>
+        <DatePicker MinimumDate="{Binding MinDate}"
+            MaximumDate="{Binding MaxDate}"
+            Date="{Binding SelectedDateFrom}" />
+
+        <Label Text="Tot:"/>
+        <DatePicker MinimumDate="{Binding MinDate}"
+            MaximumDate="{Binding MaxDate}"
+            Date="{Binding SelectedDateTo}" Margin="0,0,0,15" />
+
+        <!--<Label Text="Van: "/>
+        <Entry Text= "{Binding From}" Placeholder= "19/10/2019"/>
+
+        <Label Text="Tot: "/>
+        <Entry Text= "{Binding To}" Placeholder= "20/10/2019"/>-->
+
+        <StackLayout Orientation="Horizontal" Spacing="10">
+            <Label Text="Graphs"/>
+            <Switch/>
+            <Label Text="Plain Data"/>
+        </StackLayout>
+
+        <Label Text="{Binding DisplayMessage}"/>
+
+        <Button Text="GO" x:Name="ButtonGo"/>
+
+    </StackLayout>
+
+</ContentPage>
